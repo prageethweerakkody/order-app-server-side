@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a product</title>
+
+    <!-- <link rel="stylesheet" href="create-product.component.scss""> -->
+    <link rel="stylesheet" href="create-product.component.scss">
+</head>
+
+<body>
+    <form action="create-product.component.html" class="box" method="POST">
+        <h1>Add a product</h1>
+        <input type="text" placeholder="product name" id="name" [(ngModel)]="product.name" name="name">
+        <input type="text" placeholder="product price" id="price" [(ngModel)]="product.price" name="price">
+        <input type="text" placeholder="image url" id="image" [(ngModel)]="product.image" name="image">
+        <input type="submit" value="Add" (click)="saveProduct()">
+    </form>
+</body>
